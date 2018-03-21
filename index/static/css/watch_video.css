@@ -1,0 +1,159 @@
+#vl{
+	float:right;
+	margin-top: 25px;
+	margin-left: 2px;
+
+background-color: #d9dada;
+width:400px;
+height: 3000px;
+
+}
+
+#vid{
+	margin-left: 60px;
+	margin-top: 25px;
+	width: 800px;
+height:460px;
+
+
+
+
+}
+
+#norm{
+
+}
+
+.vid-list-container {
+	margin-left: 2px;
+			width: 92%;
+			overflow: hidden;
+			margin-top: 20px;
+			margin-left:4%;
+			padding-bottom: 20px;
+
+		}
+
+		.vid-list {
+			width: 1344px;
+			position: relative;
+			top:0;
+			left: 0;
+
+		}
+
+		.vid-item {
+						margin-left: 10px;
+			display: block;
+			width: 370px;
+			height: 130px;
+
+			margin: 0;
+			padding: 10px;
+		}
+
+		.thumb {
+			/*position: relative;*/
+			overflow:hidden;
+			height: 110px;
+		}
+
+		.thumb img {
+			width: 55%;
+			position: relative;
+			top: -13px;
+		}
+
+		.vid-item .desc {
+
+			width:125px;
+			height:115px;
+          			position:relative;
+			left:200px;
+			top:-120px;
+			overflow:hidden;
+			color: black;
+			font-size: 15px;
+			margin-top:5px;
+		}
+
+		#r1{
+           width: 360px;
+			height: 150px;
+
+		}
+
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #535354;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 1px;
+  bottom: -2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+
+
+input:checked + .slider {
+  background-color: #50b7c9;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #50b7c9;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#toggle{
+	margin-top: 20px;
+
+	margin-left: 170px;
+	}
+
+	#str1{
+
+		font-size: 23px;
+	}
+	#str{
+		margin-top: 15px;
+		margin-left: 35px;
+	}

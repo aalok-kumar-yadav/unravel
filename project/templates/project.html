@@ -1,0 +1,191 @@
+{% extends "bs.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/project.css' %}">
+{% endblock %}
+
+{%block body %}
+
+<div id="ss" class="container">
+
+<div class="row">
+  <div id="res" class="col-sm-4"  style="margin-left:60px "> </div>
+
+<div id="ns1" class="col-sm-2"  style="margin-left:454px " >
+  <div  class="dropdown"  style="margin-top:20px " >
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu"  >
+                  <li class="l1"> <input type="radio" name="aman" id="myCheck"><button class="c1"   height="10px" type="submit"> Most forks   </button></li>
+                  <li class="l1"><input type="radio" name="aman" id="myCheck1"><button class="c1"   height="10px" type="submit"> Most stars   </button></li>
+
+                </ul>
+              </div>
+</div>
+
+
+</div>
+
+
+  </div>
+
+
+
+
+	<div id ="content">
+
+
+		<div id= "d1">
+        </div>
+
+
+        <div id="footer" class="container">
+
+  <div class="row">
+     <div class="col-sm-5" >
+      <h3>Unravel</h3>
+       <p>A centralized place for learning modern computer science with best and new way.</p>
+     </div>
+    <div class="col-sm-4" margin-left:100px;>
+      <h3>Useful links</h3>
+      <ul>
+
+        <li>Your account</li>
+        <li><a href="#" style="color: black; text-decoration: none;">
+        Help
+      </a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3" ">
+            <h3>Contact us</h3>
+      <p><i class="fa fa-home mr-3"></i> Gandhinagar, Gujarat</p>
+                <p><i class="fa fa-envelope mr-3"></i> unravel_official@gmail.com</p>
+
+
+  </div>
+</div>
+  <div id="scl">
+
+  <table style="width:40%">
+    <tr >
+
+      <td><a href="#" style="color: #00BFFF; text-decoration: none;">
+        <i class="fa fa-twitter" style="font-size:23px">
+      </a></td>
+
+        <td><a href="#" style="color: black; text-decoration: none;">
+        <i class="fa fa-linkedin" style="font-size:23px">
+      </a></td>
+
+          <td><a href="#" style="color: blue; text-decoration: none;">
+        <i class="fa fa-facebook" style="font-size:23px">
+      </a></td>
+
+            <td><a href="#" style="color: #FF8C00; text-decoration: none;">
+        <i class="fa fa-google-plus" style="font-size:23px">
+      </a></td>
+    </tr>
+  </table>
+
+
+
+  </div>
+</div>
+
+
+	</div>
+
+
+
+<script type="text/javascript">
+  $('sort').hide();
+</script>
+
+
+
+
+<script type="text/javascript">
+  $(".dropdown").hide();
+  $("#footer").hide();
+	$(document).ready( function(){
+
+		$(".c1").on('click', function(e)
+		{
+			e.preventDefault();
+			var rp =document.getElementById("res").value;
+      var link="";
+
+
+      var x = document.getElementById("myCheck").checked;
+      var y = document.getElementById("myCheck1").checked;
+
+      if(x==true && y==false){
+        link=link+'https://api.github.com/legacy/repos/search/'+rp+'&sort:forks';
+      }
+      else if(x==false&&y==true){
+        link=link+'https://api.github.com/legacy/repos/search/'+rp+'&sort:stars';
+      }
+      else{
+        link=link+'https://api.github.com/legacy/repos/search/'+rp;
+      }
+
+
+
+
+			requestJSON(link, function(json) {
+      if(json.length == 0) {
+        $("#d1").html("<h3>Repo not found</h3>");
+      }
+
+      else{
+
+	var pg1=  '<h3>'+(json.repositories).length+ '  repositories results </h3></br>';
+
+        $("#ns").html(pg1);
+        var pg ="";
+
+	for (i = 0; i <30 ; i++) {
+
+
+     pg = pg + '<table  id="tb" cellspacing=0px;cellpadding =5px width="900px" height="100px"    ><tr><td id="t1">  <a href="'+(json.repositories)[i].url+ '">'  + (json.repositories)[i].username+'/'+(json.repositories)[i].name  + ' </a> </td  > <td  id="t2"> <i class="fa fa-code-fork" style="font-size:20px"></i>  '+" "+(json.repositories)[i].forks +'</td> <td id="t3"> <span class="glyphicon glyphicon-star"></span>'+
+			(json.repositories)[i].watchers
+
+     +'</td> <td> <span class="glyphicon glyphicon-record"></span> '+ " "+ (json.repositories)[i].language  + '</td> </tr> <tr id="row2"><td colspan=4 id="h1">'+(json.repositories)[i].description+ '</td></tr><tr><td>created at '+": "+(json.repositories)[i].created+'</td></tr></table> '
+
+
+     +
+     '<p id="p1">_ </p>';
+	}
+
+
+
+      	$("#d1").html(pg);
+        $(".dropdown").show();
+        $("#footer").show();
+        dd=".c1";
+
+      }
+
+		});
+
+
+	});
+
+
+
+function requestJSON(url, callback) {
+    $.ajax({
+      url: url,
+      complete: function(xhr) {
+        callback.call(null, xhr.responseJSON);
+      }
+    });
+  }
+
+});
+
+
+</script>
+
+{% endblock %}

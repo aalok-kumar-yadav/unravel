@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href ="{% static 'css/watch_video.css' %}" >
+{% endblock %}
+
+{% block body %}
+
+<div id="norm" class="row">
+
+  <div id ="vid" class="vid-container">
+
+  <div class="video">
+  <iframe id="vid_frame" src='' height="460" width="800" frameborder="0" allowfullscreen ></iframe>
+</div>
+
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+      var queryString1 = decodeURIComponent(window.location.search);
+      queryString1=queryString1.substring(14);
+
+    var str1='http://www.youtube.com/embed/';
+    var final=str1.concat(queryString1.substring(0));
+    var str3='?rel=0&showinfo=0&autohide=1&autoplay=1';
+
+    final=final.concat(str3);
+
+    document.getElementById("vid_frame").src= final;
+
+  </script>
+
+
+
+
+{% endblock %}
+
+

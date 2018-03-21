@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+
+{% block body %}
+
+{% for video in video_list  %}
+<div  id="1" >
+   <div id="thumnail">
+        <img src="{{ video.thumbnail }}">
+
+   </div>
+<div id="title">
+    {{ video.title }}
+
+</div>
+<div id="des">
+    {{video.description}}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

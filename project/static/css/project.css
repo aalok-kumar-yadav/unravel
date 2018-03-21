@@ -1,0 +1,138 @@
+h3{
+
+
+color: white;
+
+
+
+}
+
+
+	#bdy{
+		background-image: url("1.png");
+		background-position: fixed;
+		background-attachment: fixed;
+
+}
+
+#btn{
+    border: none;
+    padding: 9.8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    cursor: pointer;
+}
+
+#d1{
+
+  background-color: white;
+width: 1000px;
+	margin-left: 150px;
+
+	position: relative;
+}
+
+#tb{
+	margin-left: 100px;
+}
+
+#content{
+
+
+	width:1000px;
+	height:100px;
+
+}
+#d7{
+width: 100px;
+	margin-left: 200px;
+	background-color: black;
+}
+
+#p1{
+
+background-color: black;
+	color:   black ;
+   font-size: 25px;
+	width: 1100px;
+	height: 30px;
+}
+
+#name{
+   color:  #09958e;
+   font-size: 25px;
+
+
+}
+#k1{
+	color:  #09958e;
+   font-size: 25px;
+}
+
+#t1
+{
+	width:500px;
+   color:  red;
+   font-size: 23px;
+}
+
+#t2{
+	width:150px;
+text-align:left;
+
+}
+
+#t3{
+	width:150px;
+text-align:left;
+
+}
+
+.l1{
+	align-content: right;
+}
+
+#sort{
+
+	margin-top: 15px;
+	width: 30px;
+
+	position: relative;
+	left: 400px;
+
+}
+
+
+
+#t9{
+
+    font-family: "Times New Roman", Times, serif;
+
+}
+#h1{
+
+	font-size: 14px;
+	font-family: sans-serif;
+}
+#row2
+{
+	padding: 50px;
+}
+
+
+
+#sort{
+
+
+}
+#con{
+
+}
+
+#res{
+
+
+
+}

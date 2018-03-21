@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% for i in playlist %}
+
+<h3 id="h1"><b><I> Video PlayList </I></b></h3>
+
+	<div class ="container">
+	<div class="row">
+	<div class="col-lg-12" id="prop1">
+		<div class="vid-list-container">
+	        <div class="vid-list">
+
+                 {% for video in i %}
+
+				<div class="vid-item" >
+				<div class="thumb">
+
+					<a id ="{{video.id}}" href="#" onclick="pass_data(this.id);return false"><img src="{{video.thumbnail}}"></a>
+				</div>
+				<div class="desc">{{video.title}}</div>
+				</div>
+
+                {% endfor %}
+
+
+	 	    <!-- LEFT AND RIGHT ARROWS -->
+
+
+        </div>
+</div>
+
+
+
+
+
+
+<div class="arrows">
+        	<div class="arrow-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        	<div class="arrow-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+        </div>
+
+
+
+
+
+	</div>
+	</div>
+</div>
+
+<!-- end of div3-->
+
+{% endfor %}
+
+
+<script type="text/javascript">
+
+  function pass_data(url) {
+    var value1=url;
+var value2="value2";
+var queryString = "?para1=" + value1;
+window.location.href = "tp.html" + queryString;
+  }
+</script>
+
+
+
+
+
+
+
+
+  	<!-- JS FOR SCROLLING THE ROW OF THUMBNAILS -->
+  	<script type="text/javascript">
+
+
+  	$(document).ready(function () {
+		    $(".arrow-right").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "+=336"
+		        }, 750);
+		    });
+		    $(".arrow-left").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "-=336"
+		        }, 750);
+		    });
+		});
+
+
+
+
+
+		  	$(document).ready(function () {
+		    $(".arrow-right1").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container1").stop().animate({
+		            scrollLeft: "+=336"
+		        }, 750);
+		    });
+		    $(".arrow-left1").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container1").stop().animate({
+		            scrollLeft: "-=336"
+		        }, 750);
+		    });
+		});
+
+
+		</script>
+
+
+
+
+
+
+		<script type="text/javascript">
+$(document).ready(function(){
+     $("#myCarousel").carousel({
+         interval : 10000,
+         pause: false
+     });
+});
+</script>
+
+{% endblock %}
