@@ -1,5 +1,6 @@
 from googleapiclient.discovery import build
 from django.shortcuts import render
+import urllib.request
 
 DEVELOPER_KEY = "AIzaSyDy7uIm3_OBOibaOpe34voXfvMeQfJuSpw"
 YOUTUBE_API_SERVICE_NAME = "youtube"
@@ -21,6 +22,9 @@ def search_result(search_query, type):
                                             part="id,snippet",
                                             maxResults=50
                                             ).execute()
+
+    vi_res = urllib.request.urlopen("https://www.googleapis.com/youtube/v3/videos?part=statistics&key=AIzaSyDy7uIm3_OBOibaOpe34voXfvMeQfJuSpw&maxResults=1&id=3u1fu6f8Hto").read()
+    print (vi_res)
     video_list = []
     v_count = 1
     pl_count = 1
@@ -31,6 +35,7 @@ def search_result(search_query, type):
             video_obj.thumbnail = video["snippet"]["thumbnails"]["medium"]["url"]
             video_obj.id = video["id"]["videoId"]
             video_obj.description = video["snippet"]["description"]
+
             video_list.append(video_obj)
             v_count = v_count + 1
 

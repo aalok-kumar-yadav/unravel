@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def sin_up(request):
+    return render(request, 'sinup.html', None)
+
+
+def log_in(request):
+    return render(request, 'login.html', None)

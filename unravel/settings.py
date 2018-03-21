@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'playlist.apps.PlaylistConfig',
     'index.apps.IndexConfig',
     'project.apps.ProjectConfig',
+    'login.apps.LoginConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -18,6 +18,7 @@ from django.conf.urls import url
 from index.views import home, search_video, watch_video
 from project.views import project
 from playlist.views import playlist
+from login.views import sin_up, log_in
 
 urlpatterns = [
     url(r'^$', home, name='home'),
@@ -25,5 +26,7 @@ urlpatterns = [
     url(r'^search$', search_video, name='search_video'),
     url(r'^playlist$', playlist, name='playlist'),
     url(r'^project$', project, name='project'),
+    url(r'^sinup$', sin_up, name='sin_up'),
+    url(r'^login/$', log_in, name='log_in'),
     url(r'^admin/', admin.site.urls),
 ]
