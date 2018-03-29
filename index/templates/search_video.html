@@ -7,19 +7,26 @@
 {% block body %}
 
 {% for video in video_list  %}
-<div  id="1" >
-   <div id="thumnail">
+<div id="search_con" class="container-fluid">
+    <div class="col-lg-4">
+        <div id="thumnail">
         <img src="{{ video.thumbnail }}">
 
    </div>
-<div id="title">
-    {{ video.title }}
-
+        <br>
+        <br>
+    </div>
+    <div class="col-lg-6">
+     <div id="title">
+           <h4><b>{{ video.title }}</b></b></h4>
 </div>
+        <br>
 <div id="des">
     {{video.description}}
 
 </div>
+
+    </div>
 
 </div>
 

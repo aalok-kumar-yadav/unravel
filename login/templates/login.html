@@ -1,6 +1,7 @@
+{% extends "b.html" %}
 {% load static %}
 {% block link %}
-    <!--===============================================================================================-->
+<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'  %}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
@@ -29,18 +30,21 @@
 <body>
 
 	<div class="limiter">
-		<div id ="div1" class="container-login100">
+		<div class="container-login100">
 			<div class="wrap-login100">
-				<div id="i1" class="login100-form-title" >
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
 					<span class="login100-form-title-1">
 						Log In
 					</span>
 				</div>
 
 				<form class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Enter username">
+
+
+                    <form class="login100-form validate-form">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="username" placeholder="Enter Email">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -50,26 +54,23 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
 
-						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
 
 					<div class="container-login100-form-btn">
+                        <br>
 						<button class="login100-form-btn">
 							Login
 						</button>
 					</div>
+                    <div id="ref">
+                        <br>
+                        <div id="create">
+                            <a href="{%url 'sin_up'  %}" style="text-decoration:none">Create An Account</a>
+                        </div>
+
+                    </div>
+
+
 				</form>
 			</div>
 		</div>
@@ -92,10 +93,5 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
-</body>
-</html>
 {% endblock %}
-
-
-
 

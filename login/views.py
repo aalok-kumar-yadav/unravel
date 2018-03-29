@@ -7,3 +7,5 @@ def sin_up(request):
 
 def log_in(request):
     return render(request, 'login.html', None)
+
+

@@ -20,9 +20,9 @@ def search_video(request):
     return render(request, 'search_video.html', {'video_list': video_list})
 
 
-
-
-
 def watch_video(request):
+    return render(request, 'watch_video.html', None)
 
-    return render(request,'watch_video.html',None)
+
+def about_us(request):
+    return render(request, 'about_me.html', None)
