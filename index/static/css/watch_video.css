@@ -157,3 +157,47 @@ input:checked + .slider:before {
 		margin-top: 15px;
 		margin-left: 35px;
 	}
+
+
+
+
+/* changes */
+
+
+
+#vertical
+
+{
+position:relative;
+right:-30px;
+top:25px;
+width:350px;
+height:2000px;
+background-color: blue;
+}
+
+#inside
+{
+background-color:red;
+width:50px;
+height:500px;
+}
+
+
+
+
+#discuss
+{
+
+position:relative;
+right:-30px;
+top:25px;
+width:350px;
+height:200px;
+background-color: blue;
+}
+
+
+
+
+

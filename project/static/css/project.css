@@ -1,10 +1,14 @@
 h3{
 
 
-color: white;
+color: black;
 
 
 
+}
+
+#res_co{
+text-color: white;
 }
 
 
@@ -30,6 +34,7 @@ color: white;
   background-color: white;
 width: 1000px;
 	margin-left: 150px;
+	margin-top: 75px;
 
 	position: relative;
 }
