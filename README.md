@@ -1,10 +1,6 @@
-# unravel
+## unravel
 
-Creating a platform where students  can get all study materials, i.e. topic
-overview, video lectures, open source projects at same place.
-
-
-# Description
+## Description
 
 Unravel is a common platform for every software developer who keep searching on the
 internet for topics and code but ends up winding with almost nothing. Unravel provides
@@ -16,7 +12,7 @@ code in one single place and thus reducing the wasting of time that users go thr
 while searching for materials.
 
 
-# Product function
+##  Product function
 
 1. Categorical Ordering of Videos(Topic wise.
 2. Categories given in form of playlists.
@@ -24,8 +20,24 @@ while searching for materials.
 4. Code of Projets can be Viewed.
 5. Links to projects on Github for extensive analysis.
 
+## Run Project
 
-# Home Page with videos
+Clone the Repository using below command
+
+``` bash
+git clone https://github.com/alokyadav777/unravel.git
+```
+
+
+after cloning go to project directory and the run server using below command
+
+``` bash
+python3 manage.py runserver
+```
+
+
+## Home Page with videos
+
 we provide the top viwed videos of youtube in category wise like java,python etc.
 where user can watch and also discuss the question in comment section.
 
@@ -33,17 +45,12 @@ where user can watch and also discuss the question in comment section.
 
 
 
-# Project Results
+## Project Results
+
 This webpage gives the searched project details from GITHUB with all details ,also
 giving the fascility of sorting by number of forks,number of stars.
 
 ![alt text](https://i.imgur.com/Vzxn2RZ.png?1)
 
-
-
-# Login Credentials
-taking user credentials
-
-![alt text](https://i.imgur.com/vRJvOjI.png?1)
 
 
